@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Michigan State Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lansing.html">Lansing</a></li>
+            <li><a href="detroit.html">Detroit</a></li>
+            <li><a href="grandrapids.html">Grand Rapids</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>        
+    </nav>
+    <section>
+        <h2>Get in Touch</h2>
+        <form id="contactForm" class="card">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Your first name" required><br><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Your last name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required><br><br>
+
+            <label for="confirmEmail">Confirm Email:</label>
+            <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Confirm your email" required><br><br>
+
+            <label for="question">Your Question:</label><br>
+            <textarea id="question" name="question" placeholder="Ask your question here" rows="4" cols="50" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <aside>
+        <h3>Contact Information</h3>
+        <p>You can reach us by filling out the form or calling our office at 123-456-7890.</p>
+    </aside>
+    <footer>
+        <p>&copy; 2024 Michigan State Website</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+    var email = document.getElementById('email').value;
+    var confirmEmail = document.getElementById('confirmEmail').value;
+
+    if (email !== confirmEmail) {
+        alert('The email addresses do not match. Please try again.');
+        event.preventDefault();
+    }
+});
+
+    </script>
+</body>
+</html>
